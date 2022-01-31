@@ -1,0 +1,12 @@
+<h1>Life tracker App</h1>
+
+
+<ul>
+  <% @animals.each do |animal|%>
+  <li>
+      <%= link_to animal.name,animal_path(animal)  %>
+  </li>
+  <% end %>
+</ul>
+<br/>
+<p>Back to <%= link_to 'Add an Animal', new_animal_path%></p>

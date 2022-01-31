@@ -1,0 +1,16 @@
+<h3>Edit an Animal</h3>
+<%= form_with model: @animal, method: :patch, local: true do |form|  %>
+    <%= form.label:name %>
+    <%= form.text_field:name %>
+    <br/>
+    <%= form.label:latin_name %>
+    <%= form.text_field:latin_name %>
+    <br/>
+    <%= form.label:kingdom %>
+    <%= form.text_field:kingdom %>
+    <br/>
+    <%= form.submit 'Edit Animal' %>
+    <%= form.submit 'Clear',:type =>'reset' %>
+<% end  %>
+    <br/>
+<p>Back to <%= link_to 'All the animals', animals_path%></p>

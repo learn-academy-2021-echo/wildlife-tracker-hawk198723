@@ -1,0 +1,11 @@
+<h1>Show Animal- find</h1>
+
+<h3 >Animal name: <%= @animal.name  %></h3>
+<h3 >Latin name: <%= @animal.latin_name  %></h3>
+<h3 >Kindom: <%= @animal.kingdom  %></h3>
+
+<p>Back to <%= link_to 'All the animals', animals_path%></p>
+<br/>
+<%= link_to 'Delete Animal', delete_animal_path(@animal), method: :delete, data: {comfirm: 'Are you sure delete this animal?'} %>
+
+<%= link_to 'Edit Animal', edit_animal_path(@animal)%>
